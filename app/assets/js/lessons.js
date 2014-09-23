@@ -333,13 +333,13 @@ define(['jquery', 'console', 'evaluate', 'globalFuncs'], function ($, regexConso
 			return $.isArray(output) && output[0] === '6+3';
 		},
 
-		lesson28Solution: '/\\d\\+\\d(?==)(?!\\d)/.exec(partialSums)',
+		lesson28Solution: '/\\d\\+\\d(?==)(?!=\\d)/.exec(partialSums)',
 		lesson28: function (input, output) {
 			if (!contains(input, ['(?=', '(?!']) || /\d/.test(input)) {
 				return false;
 			}
 
-			return $.isArray(output) && output[0] === '3+3';
+			return $.isArray(output) && output.length === 1 && output[0] === '3+3';
 		}
 	};
 
