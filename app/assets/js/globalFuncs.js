@@ -20,24 +20,21 @@ define(['jquery', 'require'], function ($, require) {
 
 	window.help = function () {
 		return [
-			'There are a number of useful commands to help you:',
-			'Lesson commands:',
-			'previous() will go back to the previous lesson.',
-			'showAnswer() will give you the answer to the current lesson. ' +
-				'Try to avoid using this!',
-			'Console commands:',
-			'clear() clears the previous commands from the console (or you ' +
-				'can press ctrl+l).',
-			'help() displays this help message.',
-			'info() displays information about Try Regex.',
-			'reset() will clear all the previous commands and return you to ' +
-				'the beginning of the tutorial'
+			'这是一些可以帮助你的命令：',
+			'课程命令：',
+			'previous() 会返回上一个课程。',
+			'showAnswer() 会给你当前课程的答案。' +
+				'尽量避免使用它！',
+			'控制台命令：',
+			'clear() 清除在控制台显示的命令（或者你可以按 ctrl+l).',
+			'help() 显示帮助信息。',
+			'info() 显示关于小试正则的信息。',
+			'reset() 会清空之前所有的命令并返回到教程的开始。'
 		].join('\n\n');
 	};
 
 	window.info = function () {
-		return 'Try Regex is an interactive regular expressions tutorial ' +
-			'written by Callum Macrae. Ask him for help!';
+		return '小试正则是一个交互式的正则表达式教程，由 Callum Macrae 编写，需要帮助的话可以请教他。';
 	};
 
 	window.previous = function () {
@@ -55,23 +52,23 @@ define(['jquery', 'require'], function ($, require) {
 
 	window.setName = function (name) {
 		if (data.name) {
-			return 'You have already set your name! ' +
-				'Type reset() to start again, if you want.';
+			return '你已经设定了你的名字！' +
+				'如果需要，输入 reset() 重新开始。';
 		}
 
 		var firstName = name.split(' ')[0];
 
 		if (firstName === 'code') {
-			return 'Your name isn\'t code! Stop it.';
+			return '你的名字不是代码！停下来。';
 		}
 
-		window.bio = 'A developer called ' + firstName + ' is learning regex';
+		window.bio = '一个名为' + firstName + '的开发者正在学习正则表达式';
 
 		data.name = name;
 		data.firstName = firstName;
 		data.firstEscaped = firstName.replace(/([$()*+.?\[^|\]])/g, '\\$1');
 
-		return 'Hello, ' + name + '!';
+		return '你好，' + name + '！';
 	};
 
 	window.showAnswer = function () {
