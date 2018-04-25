@@ -17,7 +17,7 @@ You will need Node (>= 0.9), npm and bower to be installed.
 
 ## Running
 
-It's static HTML, you don't need anything special to serve the files. However, gulp adds a number of tools which make it easier during development. You can run `gulp build` to turn the LESS code into CSS, you can use `gulp lint` to lint your code, and you can use `gulp` to run [browser-sync](http://browsersync.io/) and a LESS watcher to compile and inject changes as they're made.
+It's static HTML, you don't need anything special to serve the files. However, gulp adds a number of tools which make it easier during development. You can run `gulp build` or `npm run build` to turn the LESS code into CSS, and you can use `gulp` or `npm start` to run [browser-sync](http://browsersync.io/) and a LESS watcher to compile and inject changes as they're made.
 
 
 ## License

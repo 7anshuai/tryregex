@@ -1,6 +1,10 @@
 {
   "name": "tryregex",
   "author": "Callum Macrae <callum@macr.ae>",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
   "devDependencies": {
     "browser-sync": "^2.5.0",
     "gulp": "^3.8.11",
